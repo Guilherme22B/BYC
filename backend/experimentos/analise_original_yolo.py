@@ -1,3 +1,7 @@
+# Experimento inicial do grupo (detecção com YOLO + notas por quadro de vídeo).
+# Não faz parte do BCY Lens final: o sistema usa backend/analise.py.
+# Para rodar: pip install ultralytics opencv-python numpy
+# e coloque o vídeo em experimentos/Test_media/videointro3.mp4
 import cv2
 import numpy as np
 import os
@@ -101,7 +105,6 @@ def avaliar_cores(frame_bgr):
 
 def analisar_video(caminho_video):
     cap = cv2.VideoCapture(caminho_video)
-    print(os.path.exists("seu_video.mp4"))  # Deve retornar True se o arquivo existir
 
     if not cap.isOpened():
         print("Erro ao abrir o vídeo.")
@@ -182,5 +185,5 @@ def analisar_video(caminho_video):
 # Para testar, substitua pelo caminho do seu vídeo ou use 0 para webcam:
 # analisar_video(0)
 pasta_script = os.path.dirname(os.path.abspath(__file__))
-caminho = os.path.join(pasta_script, "videointro3.mp4")
+caminho = os.path.join(pasta_script, "Test_media", "videointro3.mp4")
 analisar_video(caminho)

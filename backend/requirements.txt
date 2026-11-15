@@ -1,0 +1,4 @@
+# opencv-python 4.x já traz o classificador Haar de rostos (cv2.data.haarcascades)
+opencv-python>=4.8,<5
+numpy>=1.24
+flask>=3.0
